@@ -1,0 +1,17 @@
+PARTIE HMTL
+
+- réagencer la section "head", ajout des meta manquant.
+- réorganiser le html, ajout des balises ; "header", "section", "h1", "main".
+- ajout des meta tags ; "Twitter", "Opengraph".
+- ajout du "schéma.org"
+- ajout des descriptions dans les "alt" des images.
+- corriger les erreurs que la console nous indique.
+- modifications de certaines balises pour les titres " h1".
+- ajout du footer.
+
+PARTIE CSS
+
+- remplacement des balies modifier dans le html.
+- modification des titres.
+- ajout des styles
+- ajout des styles pour le footer
