@@ -2,12 +2,30 @@
 	font-family: 'Inter';
 	font-style: normal;
 }
+:root {
+		/* Colors */
+	--about-color-light: #F6D2B8;
+	--about-color-dark: #E5975F;
+	--services-color-light: #A8D5D8;
+	--services-color-dark: #1C6474;
+	--filter-bg-color: #BEB45A;
+	--contact-color-light: #D8D3A8;
+	--contact-color-dark: #BEB45A;
+	--white-color: #fff;
+	--black-color: #000;
+
+}
 body {
 	max-width: 1920px;
 	margin: auto;
 }
-header {
-	background-color: white;
+h2 {
+	font-size: 1.75em;
+}
+
+/*************************** HEADER *************************/
+.top-header {
+	background-color: var(--white-color);
 	position: sticky;
 	top:0;
 	z-index: 1000;
@@ -17,35 +35,35 @@ header {
 	padding-block: 30px;
 	align-items: center;
 }
-header .name {
+.top-header .name {
 	font-size: 26px;
 }
-nav ul {
+.nav ul {
 	display: flex;
 	list-style-type: none;
 	font-size: 14px;
 	margin-bottom: 0;
 }
-nav li {
+.nav li {
 	padding-inline: 10px;
 }
-nav a {
+.nav a {
 	text-decoration: none;
-	color: #000
+	color: var(--black-color);
 }
 .social-link img {
 	width: 20px;
 }
 #about {
 	display: flex;
-	background-color: #F6D2B8;
+	background-color: var(--about-color-light);
 	padding-inline: 100px;
 	padding-block: 100px;
 	position: relative;
 }
 .picture.left::before {
 	content: ' ';
-	background-color: #E5975F;
+	background-color: var(--about-color-dark);
 	width: 374px;
 	height: 329px;
 	position: absolute;
@@ -60,26 +78,29 @@ nav a {
 }
 .picture img {
 	width: 100%;
-
 }
 #about-me {
-	flex: 2
+	flex: 2;
 }
 .about-me__title {
 	margin-top: 1em;
 	margin-bottom: 60px;
+	font-size: 30px;
 }
 .about-me__introduction {
 	font-family: 'Spectral';
 	font-weight: 800;
 	font-style: italic;
+	font-size: 1em;
+	margin-bottom: 0.5em;
+	line-height: 1.2;
 	width: 60%;
 }
-#about-me p {
+.about-me__content {
 	width: 80%;
 	font-size: 14px;
 }
-.title{
+.title {
 	text-align: center;
 	padding-block: 2em;
 }
@@ -87,15 +108,12 @@ nav a {
 	justify-content: center;
 }
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-	color: #000;
-	background-color: #BEB45A;
+	color: var(--white-color);
+	background-color: var(--filter-bg-color);
 	border-radius:0 ;
 }
 .nav-pills .nav-link {
-	color: #000
-}
-.nav-link {
-	cursor: pointer;
+	color: var(--black-color);
 }
 .item-column {
 	position: relative;
@@ -106,7 +124,6 @@ nav a {
 	content: "";
 	display: block;
 	padding-bottom: 100%;
-
 }
 .gallery-item {
 	position: absolute;
@@ -114,7 +131,6 @@ nav a {
 	height: 100%;
 	object-fit: cover;
 	padding: .5em;
-	cursor: pointer;
 }
 .mg-prev, .mg-next {
 	width: 30px;
@@ -136,7 +152,9 @@ nav a {
 	font-family: Spectral;
 	font-style: italic;
 	font-weight: 300;
-
+	font-size: 2.5em;
+    margin-bottom: .5rem;
+    line-height: 1.2;
 }
 .quote__author {
 	font-family: Spectral;
@@ -145,12 +163,12 @@ nav a {
 }
 #services {
 	margin: auto;
-	background-color: #A8D5D8 ;
+	background-color: var(--services-color-light);
 	position: relative;
 }
-#services .container::before{
+#services .container::before {
 	content: ' ';
-	background-color: #1C6474;
+	background-color: var(--services-color-dark);
 	position: absolute;
 	width: 100%;
 	height: 30%;
@@ -162,11 +180,9 @@ nav a {
 	justify-content: space-between;
 	display: flex;
 	padding : 2em 0;
-
 }
-
 .service {
-	background-color: white;
+	background-color: var(--white-color);
 	max-width: 390px;
 	width: 30%;
 	height: 337px;
@@ -176,23 +192,32 @@ nav a {
 	justify-content: space-between;
 	z-index: 1;
 }
-.service__price p {
-	margin-bottom: 0;
+.service__price strong,
+.price-details {
+    display: block;
+}
+.service__price strong {
+	font-size: 1.5em;
+	font-weight: 500;
+	line-height: 1.2;
+	margin-bottom: 0.5rem;
+}
+.price-details {
+	line-height: 19.5px;
 }
 #contact {
 	margin: auto;
-	background-color: #D8D3A8 ;
+	background-color: var(--contact-color-light);
 	position: relative;
 	padding-inline: 100px;
 	padding-block: 100px;
 }
-
 #contact .container {
 	display: flex;
 }
 .picture.right::before {
 	content: ' ';
-	background-color: #BEB45A;
+	background-color: var(--contact-color-dark);
 	width: 374px;
 	height: 329px;
 	position: absolute;
@@ -202,7 +227,6 @@ nav a {
 }
 .form-container {
 	flex : 2;
-
 }
 form {
 	display: flex;
@@ -227,10 +251,54 @@ form textarea {
 	margin-bottom: 20px;
 }
 input[type="submit"] {
-	background-color: #BEB45A;
+	background-color: var(--contact-color-dark);
 	padding: .5em 1em
 }
+.footer-content {
+	display: flex;
+	justify-content: space-between;
+	margin: 30px 100px;
+	font-size: 14px;
+}
+.socialmedia ul {
+	display: flex;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.socialmedia li {
+	padding-inline: 10px;
+}
+.footer-cat-logo {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.footer-title {
+	font-size: 20px;
+	font-weight: 900;
+}
+.footer-info {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+.logo-footer {
+	font-size: 26px;
+	text-decoration: none;
+	color: var(--black-color);
+}
+.logo-footer:hover {
+	color: var(--black-color);
+}
+.footer-cat-contact p {
+	margin-bottom: 0;
+}
 
+/*************************** MEDIA QUERIES *************************/
+
+/*********** Medium devices (tablets, less equal than 1180px) ************/
 @media all and (max-width: 1180px) {
 	.picture {
 		flex : 2;
@@ -242,15 +310,15 @@ input[type="submit"] {
 		margin-top: 0;
 		margin-bottom: 1em;
 	}
-	#about-me h3, #about-me p {
+	#about-me p {
 		width: 100%;
 	}
 }
 
+/****************** Small devices (phones, less than 1000px) *****************/
 @media all and (max-width: 1000px) {
 	#about{
 		flex-direction: column;
-
 	}
 	.picture {
 		width: 50%;
@@ -264,7 +332,7 @@ input[type="submit"] {
 		left: 0;
 		z-index: -1;
 	}
-	.about-me__title{
+	.about-me__title {
 		text-align: center;
 		margin-top: 1em;
 	}
@@ -277,10 +345,10 @@ input[type="submit"] {
 		height: auto;
 		margin: 2em 0
 	}
-	.service__description{
+	.service__description {
 		margin-bottom: 1em;
 	}
-	#services .container::before{
+	#services .container::before {
 		width: 30%;
 		height: 100%;
 		bottom: 0;
@@ -302,8 +370,16 @@ input[type="submit"] {
 		right: 0;
 		z-index: -1;
 	}
+	.footer-content {
+		display: flex;
+		flex-direction: column;
+	}
+	.footer-cat-logo {
+		margin-bottom: 20px;
+	}
 }
 
+/****************** Small devices (phones, less than 650px) *****************/
 @media all and (max-width: 650px) {
 	.top-header {
 		flex-direction: column;
