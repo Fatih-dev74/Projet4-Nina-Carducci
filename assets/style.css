@@ -121,7 +121,7 @@ nav a {
 .mg-next {
     width: 30px;
     height: 30px;
-    border-radius: 50%; /* Correction de la propriété border-radius */
+    border-radius: 50%;
     justify-content: center;
     align-items: center;
     display: flex;
