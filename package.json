@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.21.0"
+  },
+  "name": "projet4-nina-carducci",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
